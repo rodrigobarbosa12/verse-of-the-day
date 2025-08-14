@@ -3,7 +3,7 @@ const path = require("path");
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 500,
+    width: 600,
     height: 800,
     webPreferences: {
       preload: path.join(__dirname, "renderer.js"),
@@ -12,7 +12,7 @@ function createWindow() {
     },
   });
 
-  win.loadFile("index.html");
+  win.loadFile("src/index.html");
 }
 
 app.whenReady().then(createWindow);

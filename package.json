@@ -1,10 +1,15 @@
 {
   "name": "app-versiculos",
   "version": "1.0.0",
-  "main": "main.js",
+  "description": "Um aplicativo para exibir versiculos diarios",
+  "license": "MIT",
+  "main": "src/main.js",
   "scripts": {
-    "start": "electron .",
-    "build": "electron-builder"
+    "start": "electron-forge start",
+    "start:linux": "sudo chown root:root node_modules/electron/dist/chrome-sandbox && sudo chmod 4755 node_modules/electron/dist/chrome-sandbox && electron-forge start",
+    "build": "electron-builder",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
   },
   "build": {
     "appId": "com.verse-of-the-day",
@@ -20,7 +25,17 @@
     }
   },
   "devDependencies": {
-    "electron": "^31.0.0",
-    "electron-builder": "^26.0.12"
+    "@electron-forge/cli": "^7.8.3",
+    "@electron-forge/maker-deb": "^7.8.3",
+    "@electron-forge/maker-rpm": "^7.8.3",
+    "@electron-forge/maker-squirrel": "^7.8.3",
+    "@electron-forge/maker-zip": "^7.8.3",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.8.3",
+    "@electron-forge/plugin-fuses": "^7.8.3",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^31.0.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
   }
 }

@@ -30,6 +30,12 @@
    npm install
    ```
 2. **Executar**
+
    ```bash
    npm run start
+   ```
+
+3. **Permissões**
+   ```bash
+   cd {{app-dir}} && sudo chown root:root chrome-sandbox && sudo chmod 4755 chrome-sandbox
    ```
