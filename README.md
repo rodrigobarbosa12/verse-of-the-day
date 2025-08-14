@@ -2,7 +2,9 @@
 
 > **Um aplicativo simples em ElectronJS** para exibir versículos bíblicos acompanhados de belas imagens.
 
----
+<p align="center">
+  <img src="image.png" alt="Logo do projeto" width="200"/>
+</p>
 
 ## ✨ Funcionalidades
 
